@@ -168,5 +168,5 @@ function dihotomy(a, b) {
         if (ask == `<`) b = x
         if (ask == `=`) break
     }
-    return alert(x)
+    return alert(`The number is ${x}`)
 }
