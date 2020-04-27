@@ -118,7 +118,10 @@ $btn9.addEventListener('click', () => {
 })
 
 //Task 10
-$btn10.addEventListener('click', () => { })
+$btn10.addEventListener('click', () => {
+    let playGame = confirm(`Let's play?`)
+    dihotomy(0, 100)
+})
 
 
 function gcd(m, n) {
@@ -153,4 +156,17 @@ function weekDay(day) {
     else if (day == 6) str = "Saturday"
     else if (day == 0) str = "Sunday"
     return str
+}
+
+//Binary search (without approximation)
+function dihotomy(a, b) {
+    let x, ask
+    while (b - a > 0) {
+        x = Math.ceil((a + b) / 2)
+        ask = prompt(`Your number >${x}, <${x} or =${x}`)
+        if (ask == `>`) a = x
+        if (ask == `<`) b = x
+        if (ask == `=`) break
+    }
+    return alert(x)
 }
